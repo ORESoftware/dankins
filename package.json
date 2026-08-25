@@ -1,0 +1,27 @@
+{
+  "name": "@oresoftware/dankins",
+  "version": "0.1.0",
+  "description": "Deterministic Jenkins declarative-pipeline renderer and validator",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "dankins": "./bin/dankins.mjs"
+  },
+  "exports": "./src/index.mjs",
+  "files": [
+    "bin",
+    "src",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "example": "node bin/dankins.mjs examples/pipeline.json",
+    "test": "node --test",
+    "check": "node --check src/index.mjs && node --check bin/dankins.mjs && npm test"
+  },
+  "license": "MIT"
+}

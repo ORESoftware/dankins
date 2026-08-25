@@ -1,0 +1,18 @@
+{
+  "agent": "any",
+  "stages": [
+    {
+      "name": "Validate",
+      "steps": [
+        "npm ci --ignore-scripts",
+        "npm test"
+      ]
+    },
+    {
+      "name": "Package",
+      "steps": [
+        "npm pack --dry-run --json"
+      ]
+    }
+  ]
+}
